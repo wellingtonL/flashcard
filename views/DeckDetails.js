@@ -24,6 +24,7 @@ const styles: StyleSheet.Styles = StyleSheet.create({
   btnText: {
     color: 'white'
   }
+})
 
 export default class DeckDetails extends Component {
   state = {
