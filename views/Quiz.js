@@ -9,7 +9,7 @@ import Question from '../components/Question'
 import utils from '../helpers/utils'
 
 // styles
-const styles: StyleSheet.Styles = StyleSheet.create({
+const styles= StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
