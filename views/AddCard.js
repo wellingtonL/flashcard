@@ -6,7 +6,7 @@ import { AppLoading } from 'expo'
 import utils from '../helpers/utils'
 
 // styles
-const styles: StyleSheet.Styles = StyleSheet.create({
+const styles=StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -59,7 +59,7 @@ export default class DeckDetails extends Component {
             style={{flex:0.8, borderWidth:1, height:30, padding: 5}}
             onChangeText={(question) => this.setState({question})}
             value={this.state.question}
-            placeholder='Insert the question'
+            placeholder='Insert question'
           />
         </View>
         <View style={{flexDirection:'row', margin: 5}}>
@@ -67,7 +67,7 @@ export default class DeckDetails extends Component {
             style={{flex:0.8, borderWidth:1, height:30, padding: 5}}
             onChangeText={(answer) => this.setState({answer})}
             value={this.state.answer}
-            placeholder='Insert the answer'
+            placeholder='Insert answer'
           />
         </View>
         <TouchableOpacity
