@@ -6,7 +6,7 @@ import { AppLoading } from 'expo'
 import utils from '../helpers/utils'
 
 // styles
-const styles: StyleSheet.Styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -43,11 +43,11 @@ export default class DeckDetails extends Component {
     this.props.navigation.navigate('Quiz', {id: this.state.deck.id})
   }
 
-  updateData(cartas) {
+  updateData(cards) {
     utils.getDeck(this.props.navigation.state.params.id).then(
       deck => {
         this.setState({deck, ready: true})
-        if (cartas) {
+        if (cards) {
           this.props.navigation.state.params.updater()
         }
       }
@@ -55,7 +55,7 @@ export default class DeckDetails extends Component {
   }
 
   addCard() {
-    this.props.navigation.navigate('AddCard', {id: this.state.deck.id, updater: (cartas) => this.updateData(cartas)})
+    this.props.navigation.navigate('AddCard', {id: this.state.deck.id, updater: (cards) => this.updateData(cards)})
   }
 
   render() {
